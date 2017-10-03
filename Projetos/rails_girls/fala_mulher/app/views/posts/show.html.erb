@@ -1,21 +1,21 @@
 <p>
- <strong>Nome:</strong>
+ <strong><%= Article.human_attribute_name :name %></strong>
  <%= @post.name %>
 </p>
 
 <p>
- <strong>Contato:</strong>
+ <strong><%= Article.human_attribute_name :contact %></strong>
  <%= @post.contact %>
 </p>
 
 <p>
- <strong>Denuncia:</strong>
+ <strong<%= Article.human_attribute_name :denouncement %></strong>
  <%= @post.denouncement %>
 </p>
 
 <p>
- <strong>Tipo de denuncia:</strong>
+ <strong><%= Article.human_attribute_name :kind %></strong>
  <%= @post.kind %>
 </p>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to t('back'), posts_path %>

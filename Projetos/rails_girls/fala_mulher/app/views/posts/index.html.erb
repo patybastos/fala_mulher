@@ -1,12 +1,12 @@
-<%= link_to 'New', new_post_path %>
-<h1>Listing posts</h1>
+<%= link_to t('new'), new_post_path %>
+<h1><%= t('index') %></h1>
 
 <table>
  <tr>
-   <th>Nome (opicional)</th>
-   <th>Como podemos contactar você?</th>
-   <th>Qual tipo de abuso você sofreu?</th>
-   <th>O que aconteceu com você?</th>
+   <th><%= Article.human_attribute_name :name %></th>
+   <th><%= Article.human_attribute_name :contact %></th>
+   <th><%= Article.human_attribute_name :kind %></th>
+   <th><%= Article.human_attribute_name :denouncement %></th>
  </tr>
 
  <% @posts.each do |post| %>
@@ -15,7 +15,7 @@
      <td><%= post.contact %></td>
      <td><%= post.kind %></td>
      <td><%= post.denouncement %></td>
-     <td><%= link_to 'Show', post_path(post) %></td>
+     <td><%= link_to t('show'), post_path(post) %></td>
    </tr>
  <% end %>
 </table>
